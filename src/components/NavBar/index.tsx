@@ -1,14 +1,20 @@
 import React, { FC } from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, NativeSyntheticEvent } from 'react-native'
 
-import { NavStyles } from "./style"
+import { SearchBar } from "../SearchBar"
 
-export const NavBar: FC = () => {
+import { navStyles } from "./style"
+
+interface INavBar {
+  inputHandler: (e: string) => void
+}
+
+export const NavBar: FC<INavBar> = ({ inputHandler }) => {
 
   return (
-    <View style={NavStyles.navBar} >
+    <View style={navStyles.navBar} >
       <Text style={{ color: "white" }} > Menu </Text>  
-      <Text style={{ color: "white" }} > Search bar </Text>  
+      <SearchBar inputHandler={inputHandler} />
       <Text style={{ color: "white" }} > ProfileImage </Text>  
     </View>
   )
