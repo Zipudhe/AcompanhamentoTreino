@@ -1,6 +1,26 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
-  }
+    "strict": true,
+    "allowJs": true,
+    "rootDir": "src",
+    "outDir": "dist",
+    "jsx": "react-native",
+    "noImplicitReturns": true,
+    "noUnusedParameters": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": ["src/*"],
+      "@components": ["src/components/*"]
+    }
+  },
+  "types": [
+    "react", "react-dom", "react-native"
+  ],
+  "exclude": [
+    "build",
+    "node_modules",
+    "jest.config.js",
+    "App.tsx"
+  ]
 }
