@@ -3,6 +3,7 @@ import { View, Text } from 'react-native'
 
 import { SearchBar } from "../SearchBar"
 import { ProfileButton } from "../ProfileButton"
+import { MeuButton } from "../Menu"
 
 import { navStyles } from "./style"
 
@@ -14,7 +15,7 @@ export const NavBar: FC<INavBar> = ({ inputHandler }) => {
 
   return (
     <View style={navStyles.navBar} >
-      <Text style={{ color: "white" }} > Menu </Text>  
+      <MeuButton />
       <SearchBar inputHandler={inputHandler} />
       <ProfileButton />
     </View>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { WireFrame } from "./src/components/Wireframe"
 import { NavBar } from "./src/components/NavBar"
-import { NativeSyntheticEvent, TextInputChangeEventData, Text } from 'react-native';
+import { Card } from "./src/components/Card"
 
 export default function App() {
   const [search, setSearch] = useState('')
@@ -15,6 +15,8 @@ export default function App() {
   return (
     <WireFrame>
       <NavBar inputHandler={inputHandler} />
+      <Card exerciseName='Nome do Exercicio' defaultRepetitions={'10'} defaultWeight={'30'} />
+      <Card exerciseName='Nome do Exercicio' defaultRepetitions={'10'} defaultWeight={'30'} />
     </WireFrame>
   );
 }
